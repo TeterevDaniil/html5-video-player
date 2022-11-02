@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Html 5 API</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body style="text-align: center;">
+    <div class="wrapper">
+        <div class="container">
+            <div class="player" id="player" style="position:relative;">
+                <div>
+                    <video id="video" preload="yes" class="video_source" width="auto" height="auto" playsinline
+                        controlsList="nodownload">
+                        <source src="https://storage.yandexcloud.net/bakket/newdays/1.1.mp4">
+                    </video>
+                </div>
+                <div class="video-curtain" id="trigger-b"
+                    style="position: absolute; width: 100%; height: 100%; top: 0; left: 0;">
+                    <div id="parent_b">
+                        <div id="loading" class="loading">
+                            Загрузка Видео
+                        </div>
+                    </div>
+                </div>
+                <div class="controls" id="controls">
+                    <div class="controls_left">
+                        <a href="#"><img id="play" class="play" src="./icons/play.png" alt="" /> </a>
+                        <a href="#"><img id="dynamic" src="./icons/speaker.png" alt="" class="mute" /> </a>
+                        <div class="volume"><input type="range" step="0.1" min="0" max="1" value="1" id="volume" />
+                        </div>
+                    </div>
+                    <div class="controls_middle">
+                        <div class="">
+                            <div class="timeline" id="tm_line">
+                                <div class="progress_save"></div>
+                                <div class="progress1"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="controls_right">
+                        <div class="time" id="tm">00:00 / 00:00</div>
+                        <a href="#" class="full_screen fullscreen mediaplayer-full-screen1"><img id="full_screen"
+                                src="./icons/fullscreen.png" width="16" height="16" alt="" style=" display: block;" />
+                        </a>
+                        <a href="#" class="full_screen_exit"><img id="full_screen_exit"
+                                src="./icons/fullscreeneexit.png" width="20" height="20" alt=""
+                                style=" display: none;" /> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="player.js"></script>
+
+</body>
+
+</html>
